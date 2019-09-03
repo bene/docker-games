@@ -1,7 +1,7 @@
 FROM openjdk:8u171-jdk-alpine3.8
 
 RUN apk --no-cache add curl unzip \
-  && curl --silent --fail --show-error --location https://www.curseforge.com/minecraft/modpacks/sevtech-ages/download/2570735 --output modpack.zip \
+  && curl --silent --fail --show-error --location https://media.forgecdn.net/files/2570/735/SevTech_Ages_Server_3.0.8.zip --output modpack.zip \
   && unzip modpack.zip -d /minecraft \
   && cd /minecraft \
   && chmod +x Install.sh ServerStart.sh \
